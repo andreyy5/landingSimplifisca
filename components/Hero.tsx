@@ -6,16 +6,12 @@ export default function Hero() {
 
     const trustedUserImages = [
         'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=50',
-        'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=50',
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop'
     ];
 
     const mainImageUrl = 'https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop';
 
     const galleryStripImages = [
-        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=100',
-        'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=100',
-        'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=100',
+
     ];
 
     const trustedLogosText = [
@@ -51,7 +47,7 @@ export default function Hero() {
                                     ))}
                                 </div>
                                 <span className="text-xs text-gray-200/90">
-                                    Trusted by brands & founders worldwide
+                                    Chega de dor de cabeça na gestão da sua empresa, junte-se a nós!
                                 </span>
                             </motion.a>
 
@@ -61,9 +57,9 @@ export default function Hero() {
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
                             >
-                                Teste <br />
+                                Simplifisca <br />
                                 <span className="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 to-indigo-400">
-                                    high-impact digital experiences
+                                    A inteligência que simplifica seu negócio
                                 </span>
                             </motion.h1>
 
@@ -73,8 +69,7 @@ export default function Hero() {
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
                             >
-                                A creative digital agency helping startups and businesses grow through
-                                thoughtful design, scalable development and performance-driven strategy.
+                                Combinamos tecnologia, segurança e inovação para oferecer soluções que impulsionam o crescimento do seu negócio.
                             </motion.p>
 
                             <motion.div className="flex flex-col sm:flex-row items-center gap-4 mb-8"
@@ -85,15 +80,11 @@ export default function Hero() {
                             >
                                 <a href="/" className="w-full sm:w-auto">
                                     <PrimaryButton className="max-sm:w-full py-3 px-7">
-                                        Start your project
+                                        Vem conhecer
                                         <ArrowRightIcon className="size-4" />
                                     </PrimaryButton>
                                 </a>
 
-                                <GhostButton className="max-sm:w-full max-sm:justify-center py-3 px-5">
-                                    <PlayIcon className="size-4" />
-                                    View our work
-                                </GhostButton>
                             </motion.div>
 
                             <motion.div className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"
@@ -105,9 +96,9 @@ export default function Hero() {
                                 <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
                                     <ZapIcon className="size-4 text-sky-500" />
                                     <div>
-                                        <div>Strategy-led execution</div>
+                                        <div>Emissão de NFE simplificada</div>
                                         <div className="text-xs text-gray-400">
-                                            Focused on growth & results
+                                                Emita notas fiscais em segundos
                                         </div>
                                     </div>
                                 </div>
@@ -117,9 +108,9 @@ export default function Hero() {
                                 <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
                                     <CheckIcon className="size-4 text-cyan-500" />
                                     <div>
-                                        <div>Full-service delivery</div>
+                                        <div>Controle todo o seu negócio</div>
                                         <div className="text-xs text-gray-400">
-                                            Design, dev & marketing
+                                           Clientes, estoque, financeiro e mais
                                         </div>
                                     </div>
                                 </div>
@@ -142,14 +133,7 @@ export default function Hero() {
                                     />
 
                                     <div className="absolute left-4 top-4 px-3 py-1 rounded-full bg-black/15 backdrop-blur-sm text-xs">
-                                        Branding • Web • Growth
-                                    </div>
-
-                                    <div className="absolute right-4 bottom-4">
-                                        <button className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition focus:outline-none">
-                                            <PlayIcon className="size-4" />
-                                            <span className="text-xs">See case study</span>
-                                        </button>
+                                        Aqui atendemos a sua dor!
                                     </div>
                                 </div>
                             </motion.div>
@@ -182,7 +166,7 @@ export default function Hero() {
 
                                         <span className="relative inline-flex size-2 rounded-full bg-green-600" />
                                     </div>
-                                    20+ completed projects
+                                    Implantação rápida e gratuita
                                 </motion.div>
                             </div>
                         </motion.div>
