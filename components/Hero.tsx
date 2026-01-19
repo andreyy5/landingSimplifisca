@@ -15,11 +15,11 @@ export default function Hero() {
     ];
 
     const trustedLogosText = [
-        'Startups',
-        'Scale-ups',
-        'Founders',
-        'Global teams',
-        'Creative brands'
+        'Estoque',
+        'NFE',
+        'NFCE',
+        'Financeiro',
+        'Ordens de Serviço',
     ];
 
     return (
