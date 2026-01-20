@@ -12,9 +12,9 @@ export default function Pricing() {
             <div className="max-w-6xl mx-auto px-4">
 
                 <Title
-                    title="Pricing"
-                    heading="Simple, transparent pricing"
-                    description="Flexible agency packages designed to fit startups, growing teams and established brands."
+                    title="Planos"
+                    heading="Simples e transparente, confira nossos planos!"
+                    description="Escolha o plano que melhor se adapta às necessidades do seu negócio e comece a transformar sua gestão hoje mesmo."
                 />
 
                 <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -42,7 +42,7 @@ export default function Pricing() {
                         >
                             {plan.popular && (
                                 <p className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 rounded-md text-xs">
-                                    Most popular
+                                    Mais Popular
                                 </p>
                             )}
 
@@ -74,11 +74,11 @@ export default function Pricing() {
                             <div>
                                 {plan.popular ? (
                                     <PrimaryButton className="w-full">
-                                        Get started
+                                        Assine já
                                     </PrimaryButton>
                                 ) : (
                                     <GhostButton className="w-full justify-center">
-                                        Get started
+                                        Assine já
                                     </GhostButton>
                                 )}
                             </div>

@@ -12,8 +12,8 @@ export default function Faq() {
 
                 <Title
                     title="FAQ"
-                    heading="Frequently asked questions"
-                    description="Everything you need to know about working with our agency. If you have more questions, feel free to reach out."
+                    heading="Perguntas Frequentes"
+                    description="Sua dúvida pode estar aqui. Se precisar de mais informações, entre em contato com nossa equipe de suporte."
                 />
 
                 <div className="space-y-3">

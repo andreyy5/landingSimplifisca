@@ -21,65 +21,74 @@ export const featuresData = [
 export const plansData = [
     {
         id: 'starter',
-        name: 'Starter',
-        price: '$499',
-        desc: 'Best for early-stage startups.',
-        credits: 'One-time',
+        name: 'Mensal',
+        price: 'R$ 129,90',
+        desc: '',
+        credits: 'mês',
         features: [
-            'Project discovery & planning',
-            'UI/UX design',
-            'Basic website development',
-            '1 revision round',
-            'Email support'
+            'Implantação gratuita',
+            'Emissão de NFE simplificada',
+            'Controle de clientes e fornecedores',
+            'Gestão de produtos e estoque',
+            'Controle financeiro e fluxo de caixa',
+            'Emissão de Ordens de Serviço',
+            'Adequação ao regime tributário',
+            'Suporte a atualizações contínuas'
         ]
     },
     {
         id: 'pro',
-        name: 'Growth',
-        price: '$1,499',
-        desc: 'Growing teams and businesses.',
-        credits: 'Monthly',
+        name: 'Trimestral',
+        price: 'R$ 349,90',
+        desc: '',
+        credits: 'por 3 meses',
         features: [
-            'Everything in Starter',
-            'Advanced UI/UX design',
-            'Custom development',
-            'Performance optimization',
-            'Priority support'
+            'Implantação gratuita',
+            'Emissão de NFE simplificada',
+            'Controle de clientes e fornecedores',
+            'Gestão de produtos e estoque',
+            'Controle financeiro e fluxo de caixa',
+            'Emissão de Ordens de Serviço',
+            'Adequação ao regime tributário',
+            'Suporte a atualizações contínuas'
         ],
         popular: true
     },
     {
         id: 'ultra',
-        name: 'Scale',
-        price: '$3,999',
-        desc: 'For brands ready to scale fast.',
-        credits: 'Custom',
+        name: 'Anual',
+        price: 'R$ 1299,90',
+        desc: '',
+        credits: 'por 12 meses',
         features: [
-            'Everything in Growth',
-            'Dedicated project manager',
-            'Ongoing optimization',
-            'Marketing & growth support',
-            'Chat + Email support'
+            'Implantação gratuita',
+            'Emissão de NFE simplificada',
+            'Controle de clientes e fornecedores',
+            'Gestão de produtos e estoque',
+            'Controle financeiro e fluxo de caixa',
+            'Emissão de Ordens de Serviço',
+            'Adequação ao regime tributário',
+            'Suporte a atualizações contínuas'
         ]
     }
 ];
 
 export const faqData = [
     {
-        question: 'What services does your agency provide?',
-        answer: 'We offer end-to-end digital services including brand strategy, UI/UX design, web and app development and growth-focused marketing solutions.'
+        question: 'Posso acessar o Simplifisca NFe pelo celular ou tablet?',
+        answer: 'Sim, o Simplifisca NFe é uma plataforma baseada na web, o que significa que você pode acessá-la de qualquer dispositivo com conexão à internet, incluindo celulares e tablets.'
     },
     {
-        question: 'Do you work with startups or only large companies?',
-        answer: 'We work with startups, growing businesses and established brands. Our process is flexible and tailored to match your goals and scale.'
+        question: 'O sistema armazena minhas notas fiscais com segurança?',
+        answer: 'Sim, a segurança dos seus dados é nossa prioridade. Utilizamos criptografia avançada e medidas de segurança rigorosas para garantir que suas notas fiscais e informações estejam protegidas contra acessos não autorizados.'
     },
     {
-        question: 'How long does a typical project take?',
-        answer: 'Project timelines vary by scope, but most projects take between 2–6 weeks. We provide a clear timeline after the discovery phase.'
+        question: 'O sistema atende empresas do Simples Nacional?',
+        answer: 'Sim, o Simplifisca NFe é totalmente compatível com as exigências do Simples Nacional, facilitando a emissão de notas fiscais eletrônicas para empresas enquadradas nesse regime tributário.'
     },
     {
-        question: 'Do you offer ongoing support after launch?',
-        answer: 'Yes. We offer maintenance, optimization and growth support packages to ensure your product continues to perform and evolve.'
+        question: 'O Simplifisca NFe funciona em todos os estados do Brasil?',
+        answer: 'Sim. O Simplifisca NFe é compatível com todas as legislações fiscais estaduais, garantindo que você possa emitir notas fiscais eletrônicas em qualquer estado do Brasil.'
     }
 ];
 
