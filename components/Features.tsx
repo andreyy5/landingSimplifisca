@@ -11,8 +11,8 @@ export default function Features() {
 
                 <Title
                     title=""
-                    heading="Everything your brand needs to grow"
-                    description="From strategy to execution, we help businesses build strong digital products and meaningful customer experiences."
+                    heading="Pronto para subir o nível do seu negócio?"
+                    description="A combinação perfeita de tecnologia de ponta e simplicidade de uso."
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

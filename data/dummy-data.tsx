@@ -1,20 +1,20 @@
-import { UploadIcon, VideoIcon, ZapIcon } from 'lucide-react';
+import { BoldIcon, BoxIcon, PaperclipIcon, PartyPopperIcon, UploadIcon, VideoIcon, ZapIcon, CurrencyIcon, BusIcon, FileScanIcon, DollarSignIcon } from 'lucide-react';
 
 export const featuresData = [
     {
-        icon: <UploadIcon className="w-6 h-6" />,
-        title: 'Discovery & Planning',
-        desc: 'We understand your goals, audience and challenges to craft a clear, actionable strategy.'
+        icon: <BoxIcon className="w-6 h-6" />,
+        title: 'Controle de estoque',
+        desc: 'Controle e monitore seu inventário em tempo real, tendo acesso a informações detalhadas sobre seus produtos.'
     },
     {
-        icon: <ZapIcon className="w-6 h-6" />,
-        title: 'Design & Development',
-        desc: 'High-quality design and scalable development focused on performance and usability.'
+        icon: <FileScanIcon className="w-6 h-6" />, 
+        title: 'Emissão de notas fiscais',
+        desc: 'Gerencie a emissão de notas fiscais de forma simplificada e integrada, tendo controle delas em todos os locais.' // Descrição ajustada
     },
     {
-        icon: <VideoIcon className="w-6 h-6" />,
-        title: 'Launch & Growth',
-        desc: 'We launch, optimize and continuously improve to drive measurable business growth.'
+        icon: <DollarSignIcon className="w-6 h-6" />, // Ajustado para ícone de finanças
+        title: 'Controle financeiro',
+        desc: 'Mantenha o controle financeiro da sua empresa com interface facilitada, e com relatórios que realmente apoiam a decisão.' // Descrição ajustada
     }
 ];
 
