@@ -13,8 +13,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
     title: {
-        default: "Pixel.io – Digital Agency Template | PrebuiltUI",
-        template: "%s | Pixel.io",
+        default: "Simplifisca",
+        template: "%s | Simplifisca",
     },
     description:
         "Pixel.io is a modern digital agency template by PrebuiltUI, built for startups and growing businesses. Includes discovery, UI/UX design, development, pricing plans, FAQs, and conversion-focused sections.",

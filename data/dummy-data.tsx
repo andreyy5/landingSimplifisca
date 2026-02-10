@@ -36,41 +36,41 @@ export const plansData = [
             'Suporte a atualizações contínuas'
         ]
     },
-    {
-        id: 'pro',
-        name: 'Trimestral',
-        price: 'R$ 349,90',
-        desc: '',
-        credits: 'por 3 meses',
-        features: [
-            'Implantação gratuita',
-            'Emissão de NFE simplificada',
-            'Controle de clientes e fornecedores',
-            'Gestão de produtos e estoque',
-            'Controle financeiro e fluxo de caixa',
-            'Emissão de Ordens de Serviço',
-            'Adequação ao regime tributário',
-            'Suporte a atualizações contínuas'
-        ],
-        popular: true
-    },
-    {
-        id: 'ultra',
-        name: 'Anual',
-        price: 'R$ 1299,90',
-        desc: '',
-        credits: 'por 12 meses',
-        features: [
-            'Implantação gratuita',
-            'Emissão de NFE simplificada',
-            'Controle de clientes e fornecedores',
-            'Gestão de produtos e estoque',
-            'Controle financeiro e fluxo de caixa',
-            'Emissão de Ordens de Serviço',
-            'Adequação ao regime tributário',
-            'Suporte a atualizações contínuas'
-        ]
-    }
+    // {
+    //     id: 'pro',
+    //     name: 'Trimestral',
+    //     price: 'R$ 349,90',
+    //     desc: '',
+    //     credits: 'por 3 meses',
+    //     features: [
+    //         'Implantação gratuita',
+    //         'Emissão de NFE simplificada',
+    //         'Controle de clientes e fornecedores',
+    //         'Gestão de produtos e estoque',
+    //         'Controle financeiro e fluxo de caixa',
+    //         'Emissão de Ordens de Serviço',
+    //         'Adequação ao regime tributário',
+    //         'Suporte a atualizações contínuas'
+    //     ],
+    //     popular: true
+    // },
+    // {
+    //     id: 'ultra',
+    //     name: 'Anual',
+    //     price: 'R$ 1299,90',
+    //     desc: '',
+    //     credits: 'por 12 meses',
+    //     features: [
+    //         'Implantação gratuita',
+    //         'Emissão de NFE simplificada',
+    //         'Controle de clientes e fornecedores',
+    //         'Gestão de produtos e estoque',
+    //         'Controle financeiro e fluxo de caixa',
+    //         'Emissão de Ordens de Serviço',
+    //         'Adequação ao regime tributário',
+    //         'Suporte a atualizações contínuas'
+    //     ]
+    // }
 ];
 
 export const faqData = [
