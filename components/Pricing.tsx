@@ -1,91 +1,101 @@
-import { Check } from 'lucide-react';
-import { PrimaryButton, GhostButton } from './Buttons';
+import { Check, ArrowRight, Sparkles } from 'lucide-react';
+import { PrimaryButton } from './Buttons';
 import Title from './Title';
-import { plansData } from '@/data/dummy-data';
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
 
 export default function Pricing() {
-    const refs = useRef<(HTMLDivElement | null)[]>([]);
+    const features = [
+        'Emissão de NFE simplificada',
+        'Implantação gratuita',
+        'Controle de clientes e fornecedores',
+        'Gestão de produtos e estoque',
+        'Controle financeiro e fluxo de caixa',
+        'Emissão de Ordens de Serviço',
+        'Adequação ao regime tributário',
+        'Suporte a atualizações contínuas',
+    ];
+
     return (
         <section id="pricing" className="py-20 bg-white/3 border-t border-white/6">
             <div className="max-w-6xl mx-auto px-4">
-
                 <Title
-                    title="Planos"
-                    heading="Simples e transparente, confira nossos planos!"
-                    description="Escolha o plano que melhor se adapta às necessidades do seu negócio e comece a transformar sua gestão hoje mesmo."
+                    title="Comece Agora"
+                    heading="Teste grátis por 7 dias, sem compromisso"
+                    description="Experimente todas as funcionalidades do Simplifisca gratuitamente. Não pedimos cartão de crédito."
                 />
 
-                <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                    {plansData.map((plan, i) => (
-                        <motion.div
-                            key={i}
+                <div className="max-w-xl mx-auto">
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
+                        className="relative"
+                    >
+                        <div className="relative p-8 rounded-3xl border-2 border-indigo-500/50 bg-gradient-to-br from-indigo-950/60 to-purple-950/40 backdrop-blur shadow-2xl overflow-hidden">
+                            {/* Efeito de brilho */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
+                            
+                            {/* Badge de destaque */}
+                            <div className="absolute -top-1 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-sm font-bold flex items-center gap-2">
+                                <Sparkles className="size-4" />
+                                Plano Mensal
+                            </div>
 
-                            ref={(el) => {
-                                refs.current[i] = el;
-                            }}
-                            initial={{ y: 150, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 + i * 0.1 }}
-                            onAnimationComplete={() => {
-                                const card = refs.current[i];
-                                if (card) {
-                                    card.classList.add("transition", "duration-500", "hover:scale-102");
-                                }
-                            }}
-                            className={`relative p-6 rounded-xl border backdrop-blur ${plan.popular
-                                ? 'border-indigo-500/50 bg-indigo-900/30'
-                                : 'border-white/8 bg-indigo-950/30'
-                                }`}
-                        >
-                            {plan.popular && (
-                                <p className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 rounded-md text-xs">
-                                    Mais Popular
-                                </p>
-                            )}
-
-                            <div className="mb-6">
-                                <p>{plan.name}</p>
-                                <div className="flex items-end gap-3">
-                                    <span className="text-3xl font-extrabold">{plan.price}</span>
-                                    <span className="text-sm text-gray-400">
-                                        / {plan.credits}
-                                    </span>
+                            <div className="relative z-10 mt-4">
+                                {/* Preço */}
+                                <div className="text-center mb-6">
+                                    <div className="flex items-end justify-center gap-2 mb-2">
+                                        <span className="text-5xl font-extrabold">R$ 129,90</span>
+                                        <span className="text-lg text-gray-400 mb-2">/ mês</span>
+                                    </div>
+                                    <p className="text-gray-300">
+                                        Gestão completa do seu negócio
+                                    </p>
                                 </div>
-                                <p className="text-sm text-gray-300 mt-2">
-                                    {plan.desc}
+
+                                {/* Destaque do teste grátis */}
+                                <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/30 mb-6">
+                                    <div className="flex items-center justify-center gap-2 mb-2">
+                                        {/* <Sparkles className="size-5 text-yellow-400" /> */}
+                                        <span className="font-bold text-white">7 dias grátis</span>
+                                    </div>
+                                    <p className="text-sm text-gray-300 text-center">
+                                        Teste todas as funcionalidades sem compromisso
+                                    </p>
+                                </div>
+
+                                {/* Features em 2 colunas */}
+                                <ul className="grid md:grid-cols-2 gap-3 mb-6">
+                                    {features.map((feat, i) => (
+                                        <motion.li
+                                            key={i}
+                                            initial={{ x: -20, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.1 + i * 0.03 }}
+                                            className="flex items-start gap-2 text-sm text-gray-200"
+                                        >
+                                            <Check className="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5" />
+                                            <span>{feat}</span>
+                                        </motion.li>
+                                    ))}
+                                </ul>
+
+                                {/* CTA */}
+                                <PrimaryButton className="w-full py-4 text-base font-bold">
+                                    Começar teste grátis
+                                    <ArrowRight className="size-5" />
+                                </PrimaryButton>
+
+                                <p className="text-xs text-gray-500 text-center mt-4">
+                                    Sem cartão de crédito • Cancelamento automático após o teste grátis
                                 </p>
                             </div>
-
-                            <ul className="space-y-3 mb-6">
-                                {plan.features.map((feat, i) => (
-                                    <li
-                                        key={i}
-                                        className="flex items-center gap-3 text-sm text-gray-300"
-                                    >
-                                        <Check className="w-4 h-4 text-indigo-400" />
-                                        {feat}
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <div>
-                                {plan.popular ? (
-                                    <PrimaryButton className="w-full">
-                                        Assine já
-                                    </PrimaryButton>
-                                ) : (
-                                    <GhostButton className="w-full justify-center">
-                                        Assine já
-                                    </GhostButton>
-                                )}
-                            </div>
-                        </motion.div>
-                    ))}
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
     );
-};
+}
