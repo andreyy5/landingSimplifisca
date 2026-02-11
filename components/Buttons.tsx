@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const PrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className, ...props }) => (
+export const PrimaryButton: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({ children, className, ...props }) => (
 <a 
   href="https://wa.me/5599984428630"
   target="_blank"
