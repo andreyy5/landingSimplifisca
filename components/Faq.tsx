@@ -1,51 +1,59 @@
-import { ChevronDownIcon } from 'lucide-react';
+import { Shield, Zap, HeadphonesIcon, TrendingUp } from 'lucide-react';
 import Title from './Title';
-import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { faqData } from '@/data/dummy-data';
 
 export default function Faq() {
-    const refs = useRef<(HTMLDetailsElement | null)[]>([]);
+    const reasons = [
+        {
+            icon: <Zap className="w-8 h-8 text-yellow-400" />,
+            title: 'Rápido e Eficiente',
+            description: 'Emita notas fiscais em segundos e automatize processos repetitivos.'
+        },
+        {
+            icon: <Shield className="w-8 h-8 text-blue-400" />,
+            title: '100% Seguro',
+            description: 'Dados criptografados e backups automáticos para total segurança.'
+        },
+        {
+            icon: <HeadphonesIcon className="w-8 h-8 text-green-400" />,
+            title: 'Suporte Dedicado',
+            description: 'Nossa equipe está pronta para te ajudar sempre que precisar.'
+        },
+        {
+            icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+            title: 'Sempre Atualizado',
+            description: 'Atualizações automáticas conforme mudanças na legislação fiscal.'
+        }
+    ];
+
     return (
         <section id="faq" className="py-20 2xl:py-32">
-            <div className="max-w-3xl mx-auto px-4">
-
+            <div className="max-w-6xl mx-auto px-4">
                 <Title
-                    title="FAQ"
-                    heading="Perguntas Frequentes"
-                    description="Sua dúvida pode estar aqui. Se precisar de mais informações, entre em contato com nossa equipe de suporte."
+                    title="Diferenciais"
+                    heading="Por que escolher o Simplifisca?"
+                    description="Tecnologia, segurança e suporte que fazem a diferença no seu dia a dia."
                 />
 
-                <div className="space-y-3">
-                    {faqData.map((faq, i) => (
-                        <motion.details
-                            ref={(el) => {
-                                refs.current[i] = el;
-                            }}
-                            initial={{ y: 100, opacity: 0 }}
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {reasons.map((reason, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 + i * 0.1 }}
-                            key={i}
-                            onAnimationComplete={() => {
-                                const card = refs.current[i];
-                                if (card) {
-                                    card.classList.add("transition", "duration-300");
-                                }
-                            }}
-                            className="group bg-white/6 rounded-xl select-none"
+                            className="text-center p-6 rounded-2xl bg-white/3 border border-white/8 hover:border-white/20 hover:-translate-y-1 transition-all duration-300"
                         >
-                            <summary className="flex items-center justify-between p-4 cursor-pointer">
-                                <h4 className="font-medium">{faq.question}</h4>
-                                <ChevronDownIcon className="w-5 h-5 text-gray-300 group-open:rotate-180 transition-transform" />
-                            </summary>
-                            <p className="p-4 pt-0 text-sm text-gray-300 leading-relaxed">
-                                {faq.answer}
-                            </p>
-                        </motion.details>
+                            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10">
+                                {reason.icon}
+                            </div>
+                            <h3 className="text-lg font-semibold mb-2 text-white">{reason.title}</h3>
+                            <p className="text-sm text-gray-400 leading-relaxed">{reason.description}</p>
+                        </motion.div>
                     ))}
                 </div>
             </div>
         </section>
     );
-};
+}
