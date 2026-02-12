@@ -46,8 +46,8 @@ export default function Footer() {
               <h3 className="text-white font-semibold mb-4">Empresa</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="hover:text-white transition">Sobre nós</a></li>
-                <li><a href="#" className="hover:text-white transition">Contato</a></li>
-                <li><a href="#" className="hover:text-white transition">Política de Privacidade</a></li>
+                {/* <li><a href="#" className="hover:text-white transition">Contato</a></li> */}
+                {/* <li><a href="#" className="hover:text-white transition">Política de Privacidade</a></li> */}
               </ul>
             </div>
 
@@ -55,10 +55,10 @@ export default function Footer() {
               <h3 className="text-white font-semibold mb-4">Contato</h3>
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-center gap-2">
-                  <Mail size={16} /> suporte@simplifisca.com
+                  <Mail size={16} /> gestão@simplifisca.com.br
                 </li>
                 <li className="flex items-center gap-2">
-                  <Phone size={16} /> (99) 99999-9999
+                  <Phone size={16} /> (99) 98442-8630
                 </li>
               </ul>
             </div>

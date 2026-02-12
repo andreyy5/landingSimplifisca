@@ -22,14 +22,14 @@ export default function Features() {
     const featuresData = [
         {
             icon: <FileText className="w-6 h-6 text-indigo-400" />,
-            title: 'Emissão de NFe e NFCe',
-            desc: 'Emita notas fiscais eletrônicas (NFe) e notas de consumidor (NFCe) em segundos com nosso sistema intuitivo e automatizado.',
+            title: 'Emissão de NFe e NFSe',
+            desc: 'Emita notas fiscais eletrônicas (NFe) e notas de serviço (NFS-e) de forma rápida e fácil, com total conformidade fiscal e integração automática com os sistemas da SEFAZ.',
             featured: true
         },
         {
             icon: <Trash2 className="w-6 h-6 text-red-400" />,
             title: 'Cancelamento de Notas',
-            desc: 'Cancele NFe e NFCe de forma rápida e segura, com total conformidade com a legislação fiscal vigente.',
+            desc: 'Cancele NFe e NFSe de forma rápida e segura, com total conformidade com a legislação fiscal vigente.',
             featured: true
         },
         {
@@ -41,7 +41,7 @@ export default function Features() {
         {
             icon: <Receipt className="w-6 h-6 text-cyan-400" />,
             title: 'NFS-e (Notas de Serviço)',
-            desc: 'Emita notas fiscais de serviço eletrônicas de acordo com as regras do seu município, tudo integrado em uma única plataforma.',
+            desc: 'Emita notas fiscais de serviço eletrônicas de acordo com as regras nacionais, tudo integrado em uma única plataforma.',
             featured: false
         },
         {
@@ -53,7 +53,7 @@ export default function Features() {
         {
             icon: <DollarSign className="w-6 h-6 text-emerald-400" />,
             title: 'Controle Financeiro',
-            desc: 'Gerencie contas a pagar e receber, fluxo de caixa, conciliação bancária e relatórios financeiros detalhados.',
+            desc: 'Gerencie entrada e saída de caixa, receitas e despesas e tenha relatórios financeiros detalhados.',
             featured: false
         },
         {
@@ -83,7 +83,7 @@ export default function Features() {
         {
             icon: <FileCheck className="w-6 h-6 text-teal-400" />,
             title: 'Conformidade Fiscal',
-            desc: 'Sistema sempre atualizado conforme legislação tributária, adequado ao seu regime tributário (Simples, Presumido, Real).',
+            desc: 'Sistema sempre atualizado conforme legislação tributária.',
             featured: false
         },
         {

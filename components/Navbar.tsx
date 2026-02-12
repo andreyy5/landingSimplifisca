@@ -11,7 +11,7 @@ export default function Navbar() {
         { name: 'Início', href: '/#' },
         { name: 'Funcionalidades', href: '/#features' },
         { name: 'Comece agora', href: '/#pricing' },
-        { name: 'FAQ', href: '/#faq' },
+        { name: 'Por que nos escolher?', href: '/#faq' },
     ];
 
     return (
