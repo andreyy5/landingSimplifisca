@@ -90,7 +90,7 @@ export default function Pricing() {
                 {/* CTA */}
 
                 <a
-                  href="https://app.simplifisca.com.br"
+                  href="https://app.simplifisca.com.br/cadastro/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-4 text-base font-bold bg-gradient-to-br from-indigo-500 to-indigo-600 hover:opacity-90 active:scale-95 transition-all w-full"

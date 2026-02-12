@@ -53,7 +53,7 @@ export default function CTA() {
               }}
             >
               <a
-                href="https://app.simplifisca.com.br"
+                href="https://app.simplifisca.com.br/cadastro/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-medium border border-white/10 bg-white/3 hover:bg-white/6 backdrop-blur-sm active:scale-95 transition"
