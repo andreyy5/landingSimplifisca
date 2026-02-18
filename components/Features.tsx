@@ -21,7 +21,7 @@ export default function Features() {
 
     const featuresData = [
         {
-            icon: <FileText className="w-6 h-6 text-indigo-400" />,
+            icon: <FileText className="w-6 h-6 text-[#23A5A9]" />,
             title: 'Emissão de NFe e NFSe',
             desc: 'Emita notas fiscais eletrônicas (NFe) e notas de serviço (NFS-e) de forma rápida e fácil, com total conformidade fiscal e integração automática com os sistemas da SEFAZ.',
             featured: true
@@ -33,19 +33,19 @@ export default function Features() {
             featured: true
         },
         {
-            icon: <CheckCircle className="w-6 h-6 text-green-400" />,
+            icon: <CheckCircle className="w-6 h-6 text-[#23A5A9]" />,
             title: 'Manifestação do Destinatário',
             desc: 'Realize a manifestação de notas fiscais recebidas (Ciência, Confirmação, Desconhecimento ou Não Realizada) de forma simplificada.',
             featured: true
         },
         {
-            icon: <Receipt className="w-6 h-6 text-cyan-400" />,
+            icon: <Receipt className="w-6 h-6 text-[#23A5A9]" />,
             title: 'NFS-e (Notas de Serviço)',
             desc: 'Emita notas fiscais de serviço eletrônicas de acordo com as regras nacionais, tudo integrado em uma única plataforma.',
             featured: false
         },
         {
-            icon: <Package className="w-6 h-6 text-purple-400" />,
+            icon: <Package className="w-6 h-6 text-[#EEF3F3]/60" />,
             title: 'Gestão de Estoque',
             desc: 'Controle completo de produtos, entrada e saída de mercadorias, inventário e movimentações em tempo real.',
             featured: false
@@ -57,7 +57,7 @@ export default function Features() {
             featured: false
         },
         {
-            icon: <Users className="w-6 h-6 text-blue-400" />,
+            icon: <Users className="w-6 h-6 text-[#23A5A9]" />,
             title: 'Gestão de Clientes',
             desc: 'Cadastro completo de clientes e fornecedores com histórico de compras, vendas e relacionamento comercial.',
             featured: false
@@ -69,7 +69,7 @@ export default function Features() {
             featured: false
         },
         {
-            icon: <ShoppingCart className="w-6 h-6 text-pink-400" />,
+            icon: <ShoppingCart className="w-6 h-6 text-[#EEF3F3]/60" />,
             title: 'Gestão de Vendas',
             desc: 'Emita orçamentos, pedidos de venda e converta em notas fiscais com apenas alguns cliques.',
             featured: false
@@ -81,13 +81,13 @@ export default function Features() {
             featured: false
         },
         {
-            icon: <FileCheck className="w-6 h-6 text-teal-400" />,
+            icon: <FileCheck className="w-6 h-6 text-[#23A5A9]" />,
             title: 'Conformidade Fiscal',
             desc: 'Sistema sempre atualizado conforme legislação tributária.',
             featured: false
         },
         {
-            icon: <Clock className="w-6 h-6 text-indigo-400" />,
+            icon: <Clock className="w-6 h-6 text-[#23A5A9]" />,
             title: 'Suporte Contínuo',
             desc: 'Atualizações automáticas e suporte técnico para garantir que seu sistema esteja sempre funcionando perfeitamente.',
             featured: false
@@ -103,7 +103,7 @@ export default function Features() {
                     description="Sistema completo de gestão fiscal e empresarial com foco em emissão, cancelamento e manifestação de NFe, NFCe e NFS-e."
                 />
 
-                {/* Cards em destaque - NFe features */}
+                {/* Cards em destaque — NFe features */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                     {featuresData.filter(f => f.featured).map((feature, i) => (
                         <motion.div
@@ -118,20 +118,29 @@ export default function Features() {
                             onAnimationComplete={() => {
                                 const card = refs.current[i];
                                 if (card) {
-                                    card.classList.add("transition", "duration-300", "hover:border-indigo-500/50", "hover:-translate-y-2", "hover:shadow-lg", "hover:shadow-indigo-500/20");
+                                    card.classList.add(
+                                        "transition", "duration-300",
+                                        "hover:border-[#23A5A9]/60",
+                                        "hover:-translate-y-2",
+                                        "hover:shadow-lg",
+                                        "hover:shadow-[#23A5A9]/20"
+                                    );
                                 }
                             }}
-                            className="rounded-2xl p-6 bg-gradient-to-br from-indigo-950/40 to-purple-950/20 border-2 border-indigo-500/30 relative overflow-hidden"
+                            className="rounded-2xl p-6 bg-gradient-to-br from-[#0D3F48]/50 to-[#0F1B2B]/60 border-2 border-[#23A5A9]/30 relative overflow-hidden"
                         >
-                            {/* Efeito de brilho */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent" />
-                            
+                            {/* Efeito de brilho teal */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-[#23A5A9]/8 to-transparent" />
+
+                            {/* Accent top-right glow */}
+                            <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-[#23A5A9]/15 blur-xl" />
+
                             <div className="relative z-10">
-                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center mb-4 border border-indigo-500/30">
+                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#23A5A9]/20 to-[#0D3F48]/40 flex items-center justify-center mb-4 border border-[#23A5A9]/30">
                                     {feature.icon}
                                 </div>
-                                <h3 className="text-lg font-bold mb-2 text-white">{feature.title}</h3>
-                                <p className="text-gray-300 text-sm leading-relaxed">
+                                <h3 className="text-lg font-bold mb-2 text-[#EEF3F3]">{feature.title}</h3>
+                                <p className="text-[#EEF3F3]/65 text-sm leading-relaxed">
                                     {feature.desc}
                                 </p>
                             </div>
@@ -154,16 +163,21 @@ export default function Features() {
                             onAnimationComplete={() => {
                                 const card = refs.current[i + 3];
                                 if (card) {
-                                    card.classList.add("transition", "duration-300", "hover:border-white/20", "hover:-translate-y-1");
+                                    card.classList.add(
+                                        "transition", "duration-300",
+                                        "hover:border-[#23A5A9]/25",
+                                        "hover:bg-[#0D3F48]/20",
+                                        "hover:-translate-y-1"
+                                    );
                                 }
                             }}
-                            className="rounded-2xl p-6 bg-white/3 border border-white/8"
+                            className="rounded-2xl p-6 bg-[#0F1B2B]/40 border border-[#23A5A9]/10"
                         >
-                            <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 border border-white/10">
+                            <div className="w-12 h-12 rounded-xl bg-[#0D3F48]/30 flex items-center justify-center mb-4 border border-[#23A5A9]/15">
                                 {feature.icon}
                             </div>
-                            <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
-                            <p className="text-gray-300 text-sm leading-relaxed">
+                            <h3 className="text-lg font-semibold mb-2 text-[#EEF3F3]">{feature.title}</h3>
+                            <p className="text-[#606D7C] text-sm leading-relaxed">
                                 {feature.desc}
                             </p>
                         </motion.div>

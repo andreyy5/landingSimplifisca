@@ -17,35 +17,38 @@ export const metadata: Metadata = {
         template: "%s | Simplifisca",
     },
     description:
-        "Pixel.io is a modern digital agency template by PrebuiltUI, built for startups and growing businesses. Includes discovery, UI/UX design, development, pricing plans, FAQs, and conversion-focused sections.",
+        "Simplifisca é a solução completa para gestão fiscal e empresarial. Emita NFe, NFCe e NFS-e com rapidez, segurança e conformidade fiscal, além de controlar todo o seu negócio em um só lugar.",
     keywords: [
-        "Pixel.io",
-        "PrebuiltUI",
-        "digital agency template",
-        "Next.js agency website",
-        "UI UX agency",
-        "startup website template",
-        "web development services",
-        "design and development agency",
+        "Simplifisca",
+        "gestão fiscal",
+        "emissão de NFe",
+        "NFCe",
+        "NFS-e",
+        "ERP",
+        "sistema de gestão empresarial",
+        "controle de estoque",
+        "controle financeiro",
+        "ordens de serviço",
+        "SEFAZ",
     ],
-    authors: [{ name: "PrebuiltUI" }],
-    creator: "PrebuiltUI",
-    publisher: "PrebuiltUI",
+    authors: [{ name: "Simplifisca" }],
+    creator: "Simplifisca",
+    publisher: "Simplifisca",
 
     openGraph: {
-        title: "Pixel.io – Digital Agency Template by PrebuiltUI",
+        title: "Simplifisca – Gestão Fiscal e Empresarial Simplificada",
         description:
-            "Launch faster with Pixel.io, a modern digital agency template featuring strategy, design, development, pricing plans, and FAQs.",
-        siteName: "PrebuiltUI",
+            "Emita NFe, NFCe e NFS-e com rapidez e segurança. Controle estoque, financeiro e ordens de serviço em um só lugar.",
+        siteName: "Simplifisca",
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Pixel.io – Digital Agency Template",
+        title: "Simplifisca – Gestão Fiscal Simplificada",
         description:
-            "A conversion-focused digital agency template built with Next.js. Perfect for startups, teams, and scalable brands.",
-        creator: "@prebuiltui",
+            "Solução completa para gestão fiscal e empresarial. Emita notas fiscais e controle seu negócio com facilidade.",
+        creator: "@simplifisca",
     },
 
     robots: {
@@ -60,8 +63,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body>
+        <html lang="pt-BR">
+            <body className={outfit.variable}>
                 <SoftBackdrop />
                 <LenisScroll />
                 <Navbar />
