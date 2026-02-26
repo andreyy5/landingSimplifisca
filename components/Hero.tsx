@@ -8,6 +8,12 @@ import { PrimaryButton, GhostButton } from "./Buttons";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 export default function Hero() {
   const handleConversion = (url: string) => {
   if (typeof window !== "undefined" && window.gtag) {
