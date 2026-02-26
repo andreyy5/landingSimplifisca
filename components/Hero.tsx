@@ -9,6 +9,21 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
+  const handleConversion = (url: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: "AW-17975268120/FuQMCPnUv_4bEJimo_tC",
+      value: 1.0,
+      currency: "BRL",
+      transaction_id: "",
+      event_callback: () => {
+        window.location.href = url;
+      },
+    });
+  } else {
+    window.location.href = url;
+  }
+};
   const mainImageUrl =
     "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop";
 
@@ -149,15 +164,17 @@ export default function Hero() {
                   delay: 0.3,
                 }}
               >
-                <PrimaryButton
-                  href="https://app.simplifisca.com.br/cadastro/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="max-sm:w-full py-3 px-7"
-                >
-                  Começar teste grátis
-                  <ArrowRightIcon className="size-4" />
-                </PrimaryButton>
+<PrimaryButton
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    handleConversion("https://app.simplifisca.com.br/cadastro/");
+  }}
+  className="max-sm:w-full py-3 px-7"
+>
+  Começar teste grátis
+  <ArrowRightIcon className="size-4" />
+</PrimaryButton>
               </motion.div>
             </div>
 
