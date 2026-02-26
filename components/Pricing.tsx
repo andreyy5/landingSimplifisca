@@ -2,6 +2,12 @@ import { Check, ArrowRight, Sparkles } from "lucide-react";
 import Title from "./Title";
 import { motion } from "framer-motion";
 
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 export default function Pricing() {
   const handleConversion = (url: string) => {
   if (typeof window !== "undefined" && window.gtag) {
