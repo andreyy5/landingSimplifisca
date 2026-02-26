@@ -1,6 +1,12 @@
 import { ArrowRightIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 export default function CTA() {
   const handleConversion = (url: string) => {
   if (typeof window !== "undefined" && window.gtag) {
