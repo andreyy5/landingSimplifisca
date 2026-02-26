@@ -3,6 +3,21 @@ import Title from "./Title";
 import { motion } from "framer-motion";
 
 export default function Pricing() {
+  const handleConversion = (url: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: "AW-17975268120/FuQMCPnUv_4bEJimo_tC",
+      value: 1.0,
+      currency: "BRL",
+      transaction_id: "",
+      event_callback: () => {
+        window.location.href = url;
+      },
+    });
+  } else {
+    window.location.href = url;
+  }
+};
   const features = [
     "Emissão de NFE simplificada",
     "Implantação gratuita",
@@ -89,15 +104,17 @@ export default function Pricing() {
                 </ul>
 
                 {/* CTA */}
-                <a
-                  href="https://app.simplifisca.com.br/cadastro/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-4 text-base font-bold bg-gradient-to-br from-[#23A5A9] to-[#0D3F48] text-[#EEF3F3] hover:opacity-90 hover:shadow-lg hover:shadow-[#23A5A9]/30 active:scale-95 transition-all w-full"
-                >
-                  Começar teste grátis
-                  <ArrowRight className="size-5" />
-                </a>
+<a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    handleConversion("https://app.simplifisca.com.br/cadastro/");
+  }}
+  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-4 text-base font-bold bg-gradient-to-br from-[#23A5A9] to-[#0D3F48] text-[#EEF3F3] hover:opacity-90 hover:shadow-lg hover:shadow-[#23A5A9]/30 active:scale-95 transition-all w-full"
+>
+  Começar teste grátis
+  <ArrowRight className="size-5" />
+</a>
 
                 <p className="text-xs text-[#606D7C] text-center mt-4">
                   Sem cartão de crédito • Cancelamento automático após o teste grátis
