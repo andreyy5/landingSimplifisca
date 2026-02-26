@@ -68,8 +68,7 @@ export default function Hero() {
               >
                 <span className="size-2 rounded-full bg-[#23A5A9] animate-pulse" />
                 <span className="text-xs text-[#EEF3F3]/80">
-                  Chega de dor de cabeça na gestão da sua empresa, junte-se a
-                  nós!
+                  Buscando um sistema para emissão de notas fiscais? Junte-se a nós
                 </span>
               </motion.a>
 
