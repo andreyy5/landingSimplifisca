@@ -2,6 +2,21 @@ import { ArrowRightIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function CTA() {
+  const handleConversion = (url: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: "AW-17975268120/FuQMCPnUv_4bEJimo_tC",
+      value: 1.0,
+      currency: "BRL",
+      transaction_id: "",
+      event_callback: () => {
+        window.location.href = url;
+      },
+    });
+  } else {
+    window.location.href = url;
+  }
+};
   return (
     <section className="py-20 2xl:pb-32 px-4">
       <div className="container mx-auto max-w-3xl">
@@ -81,14 +96,16 @@ export default function CTA() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               {/* Botão primário */}
-              <a
-                href="https://app.simplifisca.com.br/cadastro/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-medium bg-gradient-to-br from-[#23A5A9] to-[#0D3F48] text-[#EEF3F3] hover:opacity-90 hover:shadow-lg hover:shadow-[#23A5A9]/30 active:scale-95 transition-all"
-              >
-                Acesse nosso sistema! <ArrowRightIcon size={18} />
-              </a>
+<a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    handleConversion("https://app.simplifisca.com.br/cadastro/");
+  }}
+  className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-medium bg-gradient-to-br from-[#23A5A9] to-[#0D3F48] text-[#EEF3F3] hover:opacity-90 hover:shadow-lg hover:shadow-[#23A5A9]/30 active:scale-95 transition-all"
+>
+  Acesse nosso sistema! <ArrowRightIcon size={18} />
+</a>
 
               {/* Botão ghost */}
               <a
