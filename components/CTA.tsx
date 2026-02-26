@@ -27,7 +27,7 @@ export default function CTA() {
     <section className="py-20 2xl:pb-32 px-4">
       <div className="container mx-auto max-w-3xl">
         <div className="rounded-3xl bg-gradient-to-b from-[#0D3F48]/40 to-[#0F1B2B]/60 border border-[#23A5A9]/25 p-12 md:p-16 text-center relative overflow-hidden">
-          {/* Noise overlay */}
+          
           <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20" />
 
           {/* Glow teal no topo */}
