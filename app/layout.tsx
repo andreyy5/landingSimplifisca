@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import SoftBackdrop from "@/components/SoftBackdrop";
 import LenisScroll from "@/components/lenis";
 import { Metadata } from "next";
+import Script from "next/script";
 
 const outfit = Outfit({
     variable: "--font-sans",
@@ -243,17 +244,30 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-BR">
-            <head>
-                <JsonLd />
-            </head>
-            <body className={outfit.variable}>
-                <SoftBackdrop />
-                <LenisScroll />
-                <Navbar />
-                {children}
-                <Footer />
-            </body>
-        </html>
+<html lang="pt-BR">
+  <body className={outfit.variable}>
+    
+    {/* Google Ads Tag */}
+    <Script
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17975268120"
+      strategy="afterInteractive"
+    />
+    <Script id="google-ads-gtag" strategy="afterInteractive">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17975268120');
+      `}
+    </Script>
+
+    <JsonLd />
+    <SoftBackdrop />
+    <LenisScroll />
+    <Navbar />
+    {children}
+    <Footer />
+  </body>
+</html>
     );
 }
