@@ -247,7 +247,7 @@ export default function RootLayout({
         <html lang="pt-BR">
             <body className={outfit.variable}>
 
-pocociaVeraguaspocociaVeraguas                <Script
+<Script
                     id="gtm-script"
                     strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
